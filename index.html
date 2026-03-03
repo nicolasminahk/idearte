@@ -1,0 +1,3365 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Idearte Digital — 40 Variantes de Identidad Visual</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Oswald:wght@300;400;600;700&family=Montserrat:wght@300;400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&family=DM+Serif+Display:ital@0;1&family=Anton&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --red: #cc0000;
+                --red2: #e63329;
+                --gold: #d4a844;
+                --dark: #0a0a0a;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: var(--dark);
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                overflow-x: hidden;
+            }
+
+            /* ── HEADER ── */
+            header {
+                position: relative;
+                text-align: center;
+                padding: 80px 24px 60px;
+                overflow: hidden;
+            }
+            header::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(ellipse at 20% 50%, rgba(204, 0, 0, 0.12) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 50%, rgba(212, 168, 68, 0.06) 0%, transparent 60%);
+            }
+            header::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #333, transparent);
+            }
+            .header-eyebrow {
+                font-size: 0.65rem;
+                letter-spacing: 0.4em;
+                color: var(--red);
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 16px;
+                position: relative;
+            }
+            header h1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: clamp(3rem, 7vw, 6rem);
+                letter-spacing: 0.08em;
+                line-height: 1;
+                position: relative;
+            }
+            header h1 em {
+                color: var(--red);
+                font-style: normal;
+            }
+            header h1 span {
+                color: var(--gold);
+            }
+            .header-sub {
+                margin: 20px auto 0;
+                color: #555;
+                font-size: 0.9rem;
+                font-weight: 300;
+                max-width: 560px;
+                line-height: 1.7;
+                position: relative;
+            }
+            .header-count {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 24px;
+                position: relative;
+                background: rgba(255, 255, 255, 0.04);
+                border: 1px solid #222;
+                border-radius: 100px;
+                padding: 8px 20px;
+                font-size: 0.7rem;
+                letter-spacing: 0.2em;
+                color: #666;
+                text-transform: uppercase;
+            }
+            .header-count strong {
+                color: var(--red);
+                font-size: 1rem;
+                letter-spacing: 0;
+            }
+
+            /* ── FILTERS ── */
+            .filters {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                justify-content: center;
+                padding: 32px 20px 24px;
+                position: sticky;
+                top: 0;
+                z-index: 50;
+                background: rgba(10, 10, 10, 0.92);
+                backdrop-filter: blur(20px);
+                border-bottom: 1px solid #1a1a1a;
+            }
+            .f-btn {
+                padding: 7px 18px;
+                border-radius: 100px;
+                border: 1px solid #2a2a2a;
+                background: transparent;
+                color: #666;
+                font-size: 0.72rem;
+                cursor: pointer;
+                transition: all 0.2s;
+                font-family: 'Montserrat', sans-serif;
+                letter-spacing: 0.08em;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+            .f-btn:hover {
+                border-color: #444;
+                color: #ccc;
+            }
+            .f-btn.active {
+                background: var(--red);
+                border-color: var(--red);
+                color: #fff;
+            }
+
+            /* ── GRID ── */
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 20px;
+                padding: 32px 24px 100px;
+                max-width: 1440px;
+                margin: 0 auto;
+            }
+
+            /* ── CARD ── */
+            .card {
+                border-radius: 14px;
+                overflow: hidden;
+                background: #0f0f0f;
+                border: 1px solid #1a1a1a;
+                transition:
+                    transform 0.35s cubic-bezier(0.23, 1, 0.32, 1),
+                    box-shadow 0.35s;
+                cursor: pointer;
+            }
+            .card:hover {
+                transform: translateY(-8px) scale(1.01);
+                box-shadow:
+                    0 30px 80px rgba(0, 0, 0, 0.6),
+                    0 0 0 1px rgba(204, 0, 0, 0.15);
+            }
+            .dp {
+                width: 100%;
+                height: 260px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+            }
+            .card-foot {
+                padding: 14px 18px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-top: 1px solid #1a1a1a;
+            }
+            .card-info h3 {
+                font-size: 0.82rem;
+                font-weight: 700;
+                color: #e0e0e0;
+                letter-spacing: 0.03em;
+            }
+            .card-info p {
+                font-size: 0.68rem;
+                color: #444;
+                margin-top: 2px;
+                letter-spacing: 0.03em;
+            }
+
+            .tag {
+                font-size: 0.58rem;
+                padding: 3px 10px;
+                border-radius: 100px;
+                font-weight: 700;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                white-space: nowrap;
+            }
+            .t-bold {
+                background: #1f0505;
+                color: #e63329;
+            }
+            .t-luxury {
+                background: #1a1400;
+                color: #d4a844;
+            }
+            .t-minimal {
+                background: #060f1a;
+                color: #4a9eff;
+            }
+            .t-modern {
+                background: #041209;
+                color: #44d485;
+            }
+            .t-editorial {
+                background: #100810;
+                color: #c084fc;
+            }
+
+            .dl-btn {
+                background: none;
+                border: 1px solid #2a2a2a;
+                color: #555;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-size: 0.7rem;
+                cursor: pointer;
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 600;
+                transition: all 0.2s;
+                letter-spacing: 0.05em;
+            }
+            .dl-btn:hover {
+                background: var(--red);
+                border-color: var(--red);
+                color: #fff;
+            }
+
+            /* ── MODAL ── */
+            .modal {
+                display: none;
+                position: fixed;
+                inset: 0;
+                z-index: 200;
+                background: rgba(0, 0, 0, 0.95);
+                align-items: center;
+                justify-content: center;
+                padding: 24px;
+                backdrop-filter: blur(10px);
+            }
+            .modal.open {
+                display: flex;
+            }
+            .mbox {
+                background: #0f0f0f;
+                border-radius: 18px;
+                overflow: hidden;
+                max-width: 700px;
+                width: 100%;
+                border: 1px solid #222;
+                box-shadow: 0 40px 120px rgba(0, 0, 0, 0.8);
+            }
+            .mpreview {
+                width: 100%;
+                height: 420px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+            }
+            .mfoot {
+                padding: 20px 28px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-top: 1px solid #1a1a1a;
+            }
+            .minfo h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                color: #fff;
+            }
+            .minfo p {
+                font-size: 0.78rem;
+                color: #555;
+                margin-top: 3px;
+            }
+            .mactions {
+                display: flex;
+                gap: 10px;
+            }
+            .btn-x {
+                padding: 10px 20px;
+                border-radius: 8px;
+                border: 1px solid #2a2a2a;
+                background: transparent;
+                color: #666;
+                cursor: pointer;
+                font-size: 0.82rem;
+                font-family: 'Montserrat', sans-serif;
+            }
+            .btn-dl {
+                padding: 10px 22px;
+                border-radius: 8px;
+                border: none;
+                background: var(--red);
+                color: #fff;
+                cursor: pointer;
+                font-size: 0.82rem;
+                font-weight: 700;
+                font-family: 'Montserrat', sans-serif;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                letter-spacing: 0.05em;
+            }
+            .btn-dl:hover {
+                background: #a00;
+            }
+
+            /* ══════════════════════════════════
+   DESIGN STYLES — 40 designs
+══════════════════════════════════ */
+
+            /* 1 — Clásico Rojo */
+            .s1 {
+                background: #cc0000;
+            }
+            .s1 .logo-circle {
+                width: 96px;
+                height: 96px;
+                background: #fff;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 40px rgba(255, 255, 255, 0.25);
+            }
+            .s1 .logo-i {
+                font-family: 'Playfair Display', serif;
+                font-size: 3rem;
+                font-style: italic;
+                color: #cc0000;
+                font-weight: 700;
+            }
+            .s1 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.15em;
+                color: #fff;
+                margin-top: 12px;
+            }
+            .s1 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.3em;
+                color: rgba(255, 255, 255, 0.65);
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 2 — Dark Gold */
+            .s2 {
+                background: #0d0d0d;
+            }
+            .s2 .frame {
+                border: 1px solid var(--gold);
+                padding: 28px 40px;
+                text-align: center;
+                position: relative;
+            }
+            .s2 .corner {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                border-color: var(--gold);
+                border-style: solid;
+            }
+            .s2 .corner.tl {
+                top: -1px;
+                left: -1px;
+                border-width: 2px 0 0 2px;
+            }
+            .s2 .corner.tr {
+                top: -1px;
+                right: -1px;
+                border-width: 2px 2px 0 0;
+            }
+            .s2 .corner.bl {
+                bottom: -1px;
+                left: -1px;
+                border-width: 0 0 2px 2px;
+            }
+            .s2 .corner.br {
+                bottom: -1px;
+                right: -1px;
+                border-width: 0 2px 2px 0;
+            }
+            .s2 .big-i {
+                font-family: 'Playfair Display', serif;
+                font-size: 4rem;
+                font-style: italic;
+                color: var(--gold);
+                line-height: 1;
+            }
+            .s2 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.2rem;
+                letter-spacing: 0.25em;
+                color: #fff;
+                margin-top: 6px;
+            }
+            .s2 .rule {
+                width: 50px;
+                height: 1px;
+                background: var(--gold);
+                margin: 8px auto;
+            }
+            .s2 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.3em;
+                color: #666;
+                text-transform: uppercase;
+            }
+
+            /* 3 — Neon Glow */
+            .s3 {
+                background: radial-gradient(ellipse at 40% 50%, #1a0025 0%, #060010 70%);
+            }
+            .s3 .orb {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                background: #cc0000;
+                box-shadow:
+                    0 0 40px #cc0000,
+                    0 0 80px rgba(204, 0, 0, 0.4);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s3 .orb-i {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.8rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s3 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.15em;
+                color: #fff;
+                margin-top: 14px;
+            }
+            .s3 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.25em;
+                color: #c084fc;
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 4 — Swiss Minimal */
+            .s4 {
+                background: #fff;
+            }
+            .s4 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 36px;
+                width: 100%;
+            }
+            .s4 .rule {
+                width: 4px;
+                height: 52px;
+                background: #cc0000;
+                margin-bottom: 14px;
+            }
+            .s4 .big-i {
+                font-family: 'Playfair Display', serif;
+                font-size: 5.5rem;
+                font-style: italic;
+                color: #cc0000;
+                font-weight: 900;
+                line-height: 1;
+            }
+            .s4 .name {
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.2rem;
+                letter-spacing: 0.12em;
+                color: #111;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .s4 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.22em;
+                color: #aaa;
+                text-transform: uppercase;
+                margin-top: 5px;
+            }
+
+            /* 5 — Fire & Gold */
+            .s5 {
+                background: radial-gradient(ellipse at 50% 80%, #3d0800, #0d0200);
+            }
+            .s5 .medallion {
+                width: 100px;
+                height: 100px;
+                background: radial-gradient(circle, #cc2200, #880000);
+                border-radius: 50%;
+                border: 2px solid var(--gold);
+                box-shadow:
+                    0 0 0 8px rgba(212, 168, 68, 0.08),
+                    inset 0 0 30px rgba(0, 0, 0, 0.5);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .s5 .ring {
+                position: absolute;
+                inset: -10px;
+                border-radius: 50%;
+                border: 1px solid rgba(212, 168, 68, 0.3);
+            }
+            .s5 .med-i {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.8rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s5 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.4rem;
+                letter-spacing: 0.2em;
+                color: var(--gold);
+                margin-top: 14px;
+            }
+            .s5 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: rgba(212, 168, 68, 0.5);
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 6 — Dark Bar */
+            .s6 {
+                background: #111;
+            }
+            .s6 .row {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+            }
+            .s6 .bar {
+                width: 5px;
+                height: 90px;
+                background: linear-gradient(180deg, #cc0000, #ff4444);
+                border-radius: 3px;
+                flex-shrink: 0;
+            }
+            .s6 .big-i {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 5.5rem;
+                color: #cc0000;
+                line-height: 0.85;
+            }
+            .s6 .col {
+                display: flex;
+                flex-direction: column;
+            }
+            .s6 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.1em;
+                color: #fff;
+            }
+            .s6 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.22em;
+                color: #444;
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 7 — Gradient Glam */
+            .s7 {
+                background: linear-gradient(135deg, #cc0000, #ff7043, #ffd700);
+                position: relative;
+                overflow: hidden;
+            }
+            .s7::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(ellipse at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+            }
+            .s7 .circle {
+                width: 100px;
+                height: 100px;
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+                position: relative;
+            }
+            .s7 .ci {
+                font-family: 'Playfair Display', serif;
+                font-size: 3rem;
+                font-style: italic;
+                color: #cc0000;
+                font-weight: 700;
+            }
+            .s7 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.12em;
+                color: #fff;
+                text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                margin-top: 12px;
+                position: relative;
+            }
+            .s7 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.25em;
+                color: rgba(255, 255, 255, 0.8);
+                text-transform: uppercase;
+                margin-top: 4px;
+                position: relative;
+            }
+
+            /* 8 — Corporate Split */
+            .s8 {
+                background: #fff;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .s8 .top {
+                background: #cc0000;
+                height: 140px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s8 .ti {
+                font-family: 'Playfair Display', serif;
+                font-size: 4.5rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+                line-height: 1;
+            }
+            .s8 .bot {
+                padding: 18px 28px;
+            }
+            .s8 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.1em;
+                color: #111;
+            }
+            .s8 .sub {
+                font-size: 0.6rem;
+                letter-spacing: 0.2em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 3px;
+            }
+
+            /* 9 — Tech Grid */
+            .s9 {
+                background: #080a10;
+                position: relative;
+                overflow: hidden;
+            }
+            .s9 .grid-bg {
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(rgba(204, 0, 0, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(204, 0, 0, 0.04) 1px, transparent 1px);
+                background-size: 22px 22px;
+            }
+            .s9 .diamond {
+                width: 84px;
+                height: 84px;
+                border: 2px solid #cc0000;
+                transform: rotate(45deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow:
+                    0 0 24px rgba(204, 0, 0, 0.3),
+                    inset 0 0 16px rgba(204, 0, 0, 0.08);
+                position: relative;
+                flex-shrink: 0;
+            }
+            .s9 .di {
+                font-family: 'Playfair Display', serif;
+                font-size: 2rem;
+                font-style: italic;
+                color: #cc0000;
+                font-weight: 700;
+                transform: rotate(-45deg);
+            }
+            .s9 .row {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                position: relative;
+            }
+            .s9 .txt {
+            }
+            .s9 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.12em;
+                color: #fff;
+            }
+            .s9 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.2em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .s9 .tag2 {
+                font-size: 0.52rem;
+                letter-spacing: 0.15em;
+                color: #333;
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 10 — Vintage Stamp */
+            .s10 {
+                background: #f4ead8;
+            }
+            .s10 .stamp {
+                border: 3px solid #8b1a1a;
+                padding: 18px 30px;
+                text-align: center;
+                transform: rotate(-1.5deg);
+                position: relative;
+            }
+            .s10 .si {
+                font-family: 'Playfair Display', serif;
+                font-size: 3.5rem;
+                font-style: italic;
+                color: #8b1a1a;
+                font-weight: 900;
+                line-height: 1;
+            }
+            .s10 .sname {
+                font-family: 'Playfair Display', serif;
+                font-size: 1rem;
+                letter-spacing: 0.08em;
+                color: #8b1a1a;
+                font-weight: 700;
+                margin-top: 4px;
+            }
+            .s10 .sdiv {
+                width: 100%;
+                height: 1px;
+                background: #8b1a1a;
+                margin: 6px 0;
+            }
+            .s10 .ssub {
+                font-size: 0.58rem;
+                letter-spacing: 0.25em;
+                color: #8b1a1a;
+                text-transform: uppercase;
+            }
+
+            /* 11 — Cinematic */
+            .s11 {
+                background: radial-gradient(ellipse at 50% 50%, #3a0000, #090000);
+                position: relative;
+                overflow: hidden;
+            }
+            .s11 .scan {
+                position: absolute;
+                inset: 0;
+                background: repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 38px,
+                    rgba(204, 0, 0, 0.03) 38px,
+                    rgba(204, 0, 0, 0.03) 39px
+                );
+            }
+            .s11 .word {
+                display: flex;
+                align-items: baseline;
+                gap: 4px;
+                position: relative;
+            }
+            .s11 .w1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 5.5rem;
+                color: #cc0000;
+                line-height: 1;
+            }
+            .s11 .w2 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 2.2rem;
+                color: #fff;
+                letter-spacing: 0.1em;
+            }
+            .s11 .divl {
+                width: 120px;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #cc0000, transparent);
+                position: relative;
+            }
+            .s11 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.35em;
+                color: #444;
+                text-transform: uppercase;
+                position: relative;
+            }
+
+            /* 12 — Red Poster */
+            .s12 {
+                background: #cc0000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s12 .ghost {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                font-family: 'Playfair Display', serif;
+                font-size: 9rem;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.08);
+                font-weight: 900;
+                line-height: 1;
+            }
+            .s12 .inner {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 28px;
+                width: 100%;
+            }
+            .s12 .label {
+                font-size: 0.55rem;
+                letter-spacing: 0.35em;
+                color: rgba(255, 255, 255, 0.5);
+                text-transform: uppercase;
+                margin-bottom: 6px;
+            }
+            .s12 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 2.2rem;
+                letter-spacing: 0.08em;
+                color: #fff;
+                line-height: 1;
+            }
+            .s12 .sub {
+                font-size: 0.65rem;
+                letter-spacing: 0.15em;
+                color: rgba(255, 255, 255, 0.75);
+                text-transform: uppercase;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px solid rgba(255, 255, 255, 0.25);
+            }
+
+            /* 13 — Geo Modern */
+            .s13 {
+                background: #111;
+                position: relative;
+                overflow: hidden;
+            }
+            .s13 .sh1 {
+                position: absolute;
+                top: -50px;
+                right: -50px;
+                width: 160px;
+                height: 160px;
+                background: rgba(204, 0, 0, 0.12);
+                transform: rotate(45deg);
+                border-radius: 20px;
+            }
+            .s13 .sh2 {
+                position: absolute;
+                bottom: -40px;
+                left: -40px;
+                width: 110px;
+                height: 110px;
+                background: rgba(204, 0, 0, 0.06);
+                transform: rotate(20deg);
+                border-radius: 12px;
+            }
+            .s13 .row {
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                position: relative;
+            }
+            .s13 .circ {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, #cc0000, #880000);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+            }
+            .s13 .ci {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.2rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s13 .right {
+            }
+            .s13 .name {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1rem;
+                font-weight: 900;
+                letter-spacing: 0.14em;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            .s13 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.2em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 4px;
+            }
+            .s13 .hr {
+                width: 100%;
+                height: 1px;
+                background: #1e1e1e;
+                margin: 6px 0;
+            }
+            .s13 .tag2 {
+                font-size: 0.52rem;
+                letter-spacing: 0.14em;
+                color: #444;
+                text-transform: uppercase;
+            }
+
+            /* 14 — Duotone Split */
+            .s14 {
+                background: #111;
+                position: relative;
+                overflow: hidden;
+                flex-direction: row;
+                align-items: stretch;
+            }
+            .s14 .half-r {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 48%;
+                background: #cc0000;
+            }
+            .s14 .l {
+                width: 48%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+            }
+            .s14 .li {
+                font-family: 'Playfair Display', serif;
+                font-size: 5.5rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 900;
+                line-height: 1;
+            }
+            .s14 .r {
+                width: 52%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding-left: 20px;
+                position: relative;
+            }
+            .s14 .rbar {
+                width: 28px;
+                height: 3px;
+                background: #cc0000;
+                margin-bottom: 10px;
+            }
+            .s14 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.4rem;
+                letter-spacing: 0.1em;
+                color: #fff;
+                line-height: 1.1;
+            }
+            .s14 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.22em;
+                color: #555;
+                text-transform: uppercase;
+                margin-top: 6px;
+            }
+
+            /* 15 — Pulse Red */
+            .s15 {
+                background: #000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s15 .rings {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .s15 .rings span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                border: 1px solid rgba(204, 0, 0, 0.15);
+            }
+            .s15 .rings span:nth-child(1) {
+                width: 110px;
+                height: 110px;
+            }
+            .s15 .rings span:nth-child(2) {
+                width: 150px;
+                height: 150px;
+            }
+            .s15 .rings span:nth-child(3) {
+                width: 200px;
+                height: 200px;
+                border-color: rgba(204, 0, 0, 0.07);
+            }
+            .s15 .logo {
+                width: 86px;
+                height: 86px;
+                border-radius: 50%;
+                background: #cc0000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow:
+                    0 0 50px rgba(204, 0, 0, 0.7),
+                    0 0 100px rgba(204, 0, 0, 0.3);
+                position: relative;
+            }
+            .s15 .li {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.5rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s15 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.14em;
+                color: #fff;
+                margin-top: 14px;
+                position: relative;
+            }
+            .s15 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 4px;
+                position: relative;
+            }
+
+            /* 16 — Magazine */
+            .s16 {
+                background: #fff;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .s16 .top-bar {
+                height: 7px;
+                background: #cc0000;
+                width: 100%;
+            }
+            .s16 .body {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 16px;
+            }
+            .s16 .eyebrow {
+                font-size: 0.52rem;
+                letter-spacing: 0.35em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+            .s16 .main {
+                display: flex;
+                align-items: baseline;
+            }
+            .s16 .m1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.8rem;
+                font-weight: 900;
+                color: #111;
+                letter-spacing: -0.02em;
+            }
+            .s16 .m2 {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.8rem;
+                font-weight: 400;
+                color: #cc0000;
+                font-style: italic;
+                letter-spacing: -0.02em;
+            }
+            .s16 .divl {
+                width: 80%;
+                height: 1px;
+                background: #eee;
+                margin: 12px auto;
+            }
+            .s16 .sub {
+                font-size: 0.6rem;
+                letter-spacing: 0.2em;
+                color: #aaa;
+                text-transform: uppercase;
+            }
+            .s16 .tagline {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 0.9rem;
+                color: #555;
+                font-style: italic;
+                margin-top: 6px;
+            }
+
+            /* 17 — Sportswear */
+            .s17 {
+                background: #cc0000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s17 .slash {
+                position: absolute;
+                top: -30px;
+                left: 35%;
+                width: 70%;
+                height: 140%;
+                background: rgba(0, 0, 0, 0.2);
+                transform: skewX(-14deg);
+            }
+            .s17 .row {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 14px;
+            }
+            .s17 .si {
+                font-family: 'Anton', sans-serif;
+                font-size: 6rem;
+                color: #fff;
+                line-height: 1;
+            }
+            .s17 .col {
+            }
+            .s17 .name {
+                font-family: 'Anton', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.08em;
+                color: #fff;
+            }
+            .s17 .line {
+                width: 36px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.4);
+                margin: 6px 0;
+            }
+            .s17 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.25em;
+                color: rgba(255, 255, 255, 0.65);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+
+            /* 18 — Social App */
+            .s18 {
+                background: linear-gradient(145deg, #0f0f23, #1a0f2e, #0d1a3a);
+            }
+            .s18 .avatar {
+                width: 86px;
+                height: 86px;
+                background: linear-gradient(135deg, #e63329, #ff6b35);
+                border-radius: 22px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 10px 40px rgba(230, 51, 41, 0.45);
+            }
+            .s18 .ai {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.5rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s18 .name {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 1.05rem;
+                font-weight: 900;
+                letter-spacing: 0.06em;
+                color: #fff;
+                text-transform: uppercase;
+                margin-top: 14px;
+            }
+            .s18 .handle {
+                font-size: 0.62rem;
+                letter-spacing: 0.1em;
+                color: rgba(255, 255, 255, 0.4);
+                margin-top: 3px;
+            }
+            .s18 .pill {
+                background: rgba(230, 51, 41, 0.18);
+                border: 1px solid rgba(230, 51, 41, 0.35);
+                padding: 4px 14px;
+                border-radius: 100px;
+                font-size: 0.56rem;
+                letter-spacing: 0.18em;
+                color: #ff7060;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 10px;
+            }
+
+            /* 19 — Brutalist */
+            .s19 {
+                background: #f0f0f0;
+            }
+            .s19 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 28px;
+                width: 100%;
+            }
+            .s19 .big {
+                font-family: 'Anton', sans-serif;
+                font-size: 7rem;
+                color: #cc0000;
+                line-height: 0.88;
+                letter-spacing: -0.02em;
+            }
+            .s19 .dig {
+                font-family: 'Anton', sans-serif;
+                font-size: 2rem;
+                color: #111;
+                letter-spacing: 0.1em;
+                border-top: 5px solid #111;
+                padding-top: 8px;
+                margin-top: 10px;
+            }
+            .s19 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.2em;
+                color: #999;
+                text-transform: uppercase;
+                margin-top: 6px;
+            }
+
+            /* 20 — Premium Seal */
+            .s20 {
+                background: linear-gradient(135deg, #0d0d0d, #161616);
+            }
+            .s20 .seal {
+                position: relative;
+                width: 110px;
+                height: 110px;
+            }
+            .s20 .or {
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                border: 1px solid rgba(212, 168, 68, 0.3);
+            }
+            .s20 .mr {
+                position: absolute;
+                inset: 8px;
+                border-radius: 50%;
+                border: 2px solid var(--gold);
+            }
+            .s20 .ic {
+                position: absolute;
+                inset: 16px;
+                border-radius: 50%;
+                background: radial-gradient(circle, #1a0000, #000);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s20 .si {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.5rem;
+                font-style: italic;
+                color: var(--gold);
+                font-weight: 700;
+            }
+            .s20 .name {
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.05rem;
+                letter-spacing: 0.32em;
+                color: var(--gold);
+                font-weight: 300;
+                text-transform: uppercase;
+                margin-top: 14px;
+            }
+            .s20 .drow {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin-top: 8px;
+            }
+            .s20 .dl {
+                flex: 1;
+                height: 1px;
+                background: rgba(212, 168, 68, 0.3);
+            }
+            .s20 .dm {
+                width: 5px;
+                height: 5px;
+                background: var(--gold);
+                transform: rotate(45deg);
+            }
+            .s20 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.35em;
+                color: rgba(212, 168, 68, 0.4);
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 21 — Neon Outline */
+            .s21 {
+                background: #000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s21 .outline-i {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 8rem;
+                color: transparent;
+                -webkit-text-stroke: 2px #cc0000;
+                line-height: 1;
+                text-shadow: 0 0 30px rgba(204, 0, 0, 0.4);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0.15;
+                letter-spacing: 0.05em;
+            }
+            .s21 .front {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .s21 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.8rem;
+                letter-spacing: 0.15em;
+                color: #fff;
+            }
+            .s21 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.3em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .s21 .line {
+                width: 60px;
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #cc0000, transparent);
+            }
+
+            /* 22 — Luxury Stripe */
+            .s22 {
+                background: #0a0a0a;
+                position: relative;
+                overflow: hidden;
+            }
+            .s22 .stripe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 5px;
+                background: linear-gradient(180deg, var(--gold), rgba(212, 168, 68, 0.3));
+            }
+            .s22 .inner {
+                padding-left: 28px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .s22 .eyebrow {
+                font-size: 0.52rem;
+                letter-spacing: 0.38em;
+                color: var(--gold);
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .s22 .name {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 2.5rem;
+                font-weight: 600;
+                color: #fff;
+                letter-spacing: 0.05em;
+                line-height: 1;
+            }
+            .s22 .name em {
+                color: var(--gold);
+                font-style: italic;
+            }
+            .s22 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: #555;
+                text-transform: uppercase;
+                margin-top: 8px;
+            }
+
+            /* 23 — Monochrome Block */
+            .s23 {
+                background: #fff;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: flex-start;
+            }
+            .s23 .blk {
+                background: #111;
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 28px;
+            }
+            .s23 .ci2 {
+                width: 80px;
+                height: 80px;
+                border: 2px solid #cc0000;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s23 .li {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.2rem;
+                font-style: italic;
+                color: #cc0000;
+                font-weight: 700;
+            }
+            .s23 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.4rem;
+                letter-spacing: 0.12em;
+                color: #fff;
+                margin-top: 12px;
+            }
+            .s23 .foot2 {
+                padding: 12px 20px;
+                display: flex;
+                justify-content: center;
+            }
+            .s23 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.25em;
+                color: #aaa;
+                text-transform: uppercase;
+            }
+
+            /* 24 — Dark Luxury Centered */
+            .s24 {
+                background: linear-gradient(160deg, #0a0000, #1a0505);
+            }
+            .s24 .hex-wrap {
+                position: relative;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s24 .hex {
+                position: absolute;
+                inset: 0;
+                background: rgba(204, 0, 0, 0.1);
+                clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+                border: 1px solid rgba(204, 0, 0, 0.3);
+            }
+            .s24 .hi {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.8rem;
+                font-style: italic;
+                color: #cc0000;
+                font-weight: 700;
+                position: relative;
+            }
+            .s24 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.18em;
+                color: #fff;
+                margin-top: 14px;
+            }
+            .s24 .rule {
+                width: 40px;
+                height: 1px;
+                background: rgba(204, 0, 0, 0.5);
+                margin: 8px 0;
+            }
+            .s24 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: #444;
+                text-transform: uppercase;
+            }
+
+            /* 25 — Editorial Bold */
+            .s25 {
+                background: #fff;
+                position: relative;
+                overflow: hidden;
+            }
+            .s25 .red-block {
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 44%;
+                background: #cc0000;
+            }
+            .s25 .inner {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+            .s25 .left {
+                width: 44%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s25 .li {
+                font-family: 'DM Serif Display', serif;
+                font-size: 5rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 400;
+                line-height: 1;
+            }
+            .s25 .right {
+                padding-left: 22px;
+            }
+            .s25 .name {
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.1rem;
+                letter-spacing: 0.14em;
+                color: #111;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+            .s25 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.22em;
+                color: #999;
+                text-transform: uppercase;
+                margin-top: 6px;
+            }
+            .s25 .bar {
+                width: 32px;
+                height: 3px;
+                background: #cc0000;
+                margin-bottom: 8px;
+            }
+
+            /* 26 — Typographic Stack */
+            .s26 {
+                background: #cc0000;
+            }
+            .s26 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 24px;
+                width: 100%;
+            }
+            .s26 .ide {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 5rem;
+                font-weight: 300;
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.2);
+                line-height: 1;
+                letter-spacing: 0.05em;
+            }
+            .s26 .arte {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 3rem;
+                color: #fff;
+                letter-spacing: 0.15em;
+                line-height: 1;
+                margin-top: -10px;
+            }
+            .s26 .digital {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.65rem;
+                font-weight: 700;
+                letter-spacing: 0.35em;
+                color: rgba(255, 255, 255, 0.6);
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+            .s26 .sub {
+                font-size: 0.52rem;
+                letter-spacing: 0.22em;
+                color: rgba(255, 255, 255, 0.45);
+                text-transform: uppercase;
+                margin-top: 10px;
+                padding-top: 8px;
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            /* 27 — Marble Luxury */
+            .s27 {
+                position: relative;
+                overflow: hidden;
+            }
+            .s27 .marble {
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(135deg, #f8f4f0 0%, #ede8e0 30%, #f2ede7 60%, #e8e0d5 100%);
+            }
+            .s27 .veins {
+                position: absolute;
+                inset: 0;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M0 100 Q 50 80 100 100 T 200 100' fill='none' stroke='rgba(0,0,0,0.04)' stroke-width='1'/%3E%3Cpath d='M0 60 Q 70 40 140 60 T 200 60' fill='none' stroke='rgba(0,0,0,0.03)' stroke-width='0.8'/%3E%3C/svg%3E")
+                    repeat;
+            }
+            .s27 .inner {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            .s27 .seal2 {
+                width: 90px;
+                height: 90px;
+                background: rgba(139, 26, 26, 0.9);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 24px rgba(139, 26, 26, 0.3);
+            }
+            .s27 .si {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 3rem;
+                font-style: italic;
+                color: #f4e8d0;
+                font-weight: 600;
+            }
+            .s27 .name {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.4rem;
+                font-weight: 600;
+                letter-spacing: 0.18em;
+                color: #2a1a1a;
+                text-transform: uppercase;
+            }
+            .s27 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: #8b6a5a;
+                text-transform: uppercase;
+            }
+
+            /* 28 — Black & White Invert */
+            .s28 {
+                background: #000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s28 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            .s28 .border-box {
+                border: 2px solid #fff;
+                padding: 20px 40px;
+                text-align: center;
+                position: relative;
+            }
+            .s28 .bi {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 4rem;
+                color: #fff;
+                line-height: 1;
+            }
+            .s28 .bname {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.2rem;
+                letter-spacing: 0.2em;
+                color: #fff;
+            }
+            .s28 .rule {
+                width: 100%;
+                height: 1px;
+                background: #fff;
+                margin: 6px 0;
+                opacity: 0.3;
+            }
+            .s28 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: #888;
+                text-transform: uppercase;
+            }
+
+            /* 29 — Gradient Dark */
+            .s29 {
+                background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #0a0a0a);
+            }
+            .s29 .logo-sq {
+                width: 90px;
+                height: 90px;
+                background: linear-gradient(135deg, #cc0000, #660000);
+                border-radius: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 8px 32px rgba(204, 0, 0, 0.4);
+            }
+            .s29 .li {
+                font-family: 'Playfair Display', serif;
+                font-size: 2.8rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s29 .name {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.95rem;
+                font-weight: 900;
+                letter-spacing: 0.16em;
+                color: #fff;
+                text-transform: uppercase;
+                margin-top: 14px;
+            }
+            .s29 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.2em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 4px;
+            }
+            .s29 .pill2 {
+                border: 1px solid #222;
+                padding: 4px 14px;
+                border-radius: 100px;
+                font-size: 0.52rem;
+                letter-spacing: 0.15em;
+                color: #555;
+                text-transform: uppercase;
+                margin-top: 8px;
+            }
+
+            /* 30 — Glitch Red */
+            .s30 {
+                background: #0a0a0a;
+                position: relative;
+                overflow: hidden;
+            }
+            .s30 .g1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(calc(-50% + 3px), -50%);
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 5rem;
+                color: rgba(204, 0, 0, 0.5);
+                letter-spacing: 0.05em;
+                white-space: nowrap;
+            }
+            .s30 .g2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(calc(-50% - 3px), -50%);
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 5rem;
+                color: rgba(0, 200, 255, 0.2);
+                letter-spacing: 0.05em;
+                white-space: nowrap;
+            }
+            .s30 .front2 {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .s30 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.8rem;
+                letter-spacing: 0.1em;
+                color: #fff;
+            }
+            .s30 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.25em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+
+            /* 31 — Warm Cream */
+            .s31 {
+                background: #faf5ec;
+            }
+            .s31 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            .s31 .crown {
+                width: 80px;
+                height: 80px;
+                background: #8b1a1a;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: rotate(5deg);
+            }
+            .s31 .ci {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 2.5rem;
+                font-style: italic;
+                color: #f4e8d0;
+                font-weight: 600;
+            }
+            .s31 .name {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.6rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                color: #2a1a1a;
+            }
+            .s31 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.28em;
+                color: #8b6a5a;
+                text-transform: uppercase;
+            }
+            .s31 .hr {
+                width: 60px;
+                height: 1px;
+                background: #8b1a1a;
+                opacity: 0.4;
+            }
+
+            /* 32 — Punk Electric */
+            .s32 {
+                background: #000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s32 .stripe1 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                background: repeating-linear-gradient(90deg, #cc0000, #cc0000 20px, transparent 20px, transparent 30px);
+            }
+            .s32 .stripe2 {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                background: repeating-linear-gradient(90deg, #cc0000, #cc0000 20px, transparent 20px, transparent 30px);
+            }
+            .s32 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 16px 0;
+            }
+            .s32 .name {
+                font-family: 'Anton', sans-serif;
+                font-size: 2rem;
+                letter-spacing: 0.08em;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            .s32 .sub {
+                font-size: 0.58rem;
+                letter-spacing: 0.28em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            .s32 .i-wrap {
+                border: 2px solid #cc0000;
+                padding: 6px 18px;
+            }
+            .s32 .bi2 {
+                font-family: 'Anton', sans-serif;
+                font-size: 2.8rem;
+                color: #cc0000;
+                line-height: 1;
+            }
+
+            /* 33 — Clean Circle */
+            .s33 {
+                background: #f7f7f7;
+            }
+            .s33 .outer {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                border: 2px solid #ddd;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s33 .inner2 {
+                width: 96px;
+                height: 96px;
+                border-radius: 50%;
+                background: #cc0000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s33 .ci {
+                font-family: 'DM Serif Display', serif;
+                font-size: 3rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 400;
+            }
+            .s33 .name {
+                font-family: 'Oswald', sans-serif;
+                font-size: 1.1rem;
+                font-weight: 600;
+                letter-spacing: 0.14em;
+                color: #222;
+                text-transform: uppercase;
+                margin-top: 14px;
+            }
+            .s33 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.22em;
+                color: #aaa;
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 34 — Foil Gold Dark */
+            .s34 {
+                background: linear-gradient(135deg, #080800, #141400);
+            }
+            .s34 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            .s34 .logo-d {
+                width: 100px;
+                height: 100px;
+                background: radial-gradient(circle at 35% 35%, #ffe066, #c8860a, #7a4e00);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 0 40px rgba(212, 168, 68, 0.4);
+            }
+            .s34 .li {
+                font-family: 'Playfair Display', serif;
+                font-size: 3rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 900;
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            }
+            .s34 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.4rem;
+                letter-spacing: 0.22em;
+                color: var(--gold);
+            }
+            .s34 .rule {
+                width: 40px;
+                height: 1px;
+                background: var(--gold);
+                opacity: 0.5;
+            }
+            .s34 .sub {
+                font-size: 0.54rem;
+                letter-spacing: 0.3em;
+                color: rgba(212, 168, 68, 0.45);
+                text-transform: uppercase;
+            }
+
+            /* 35 — Bold Red Italic */
+            .s35 {
+                background: #fff;
+            }
+            .s35 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 30px;
+                width: 100%;
+            }
+            .s35 .big {
+                font-family: 'DM Serif Display', serif;
+                font-size: 4.5rem;
+                font-style: italic;
+                color: #cc0000;
+                line-height: 0.9;
+                letter-spacing: -0.02em;
+            }
+            .s35 .name2 {
+                font-family: 'Oswald', sans-serif;
+                font-size: 1rem;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+                color: #111;
+                text-transform: uppercase;
+                margin-top: 8px;
+                padding-top: 8px;
+                border-top: 2px solid #cc0000;
+            }
+            .s35 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.2em;
+                color: #aaa;
+                text-transform: uppercase;
+                margin-top: 4px;
+            }
+
+            /* 36 — Retro Wave */
+            .s36 {
+                background: linear-gradient(180deg, #0a001a, #1a0030);
+                position: relative;
+                overflow: hidden;
+            }
+            .s36 .sun {
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 180px;
+                height: 90px;
+                border-radius: 90px 90px 0 0;
+                background: linear-gradient(180deg, #cc0000, #ff6600);
+                opacity: 0.7;
+            }
+            .s36 .lines {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 50px;
+            }
+            .s36 .lines::before,
+            .s36 .lines::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: rgba(204, 0, 0, 0.3);
+            }
+            .s36 .lines::before {
+                bottom: 25px;
+            }
+            .s36 .lines::after {
+                bottom: 10px;
+            }
+            .s36 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 2.2rem;
+                letter-spacing: 0.2em;
+                color: #fff;
+                position: relative;
+                text-shadow: 0 0 20px rgba(204, 0, 0, 0.8);
+            }
+            .s36 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.28em;
+                color: rgba(255, 100, 0, 0.8);
+                text-transform: uppercase;
+                position: relative;
+                margin-top: 4px;
+            }
+
+            /* 37 — Black Serif */
+            .s37 {
+                background: #111;
+            }
+            .s37 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .s37 .sq {
+                width: 90px;
+                height: 90px;
+                background: #cc0000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s37 .si {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 3.5rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 300;
+            }
+            .s37 .name {
+                font-family: 'Cormorant Garamond', serif;
+                font-size: 1.6rem;
+                font-weight: 600;
+                letter-spacing: 0.14em;
+                color: #fff;
+                text-transform: uppercase;
+            }
+            .s37 .divl2 {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                width: 180px;
+            }
+            .s37 .dl2 {
+                flex: 1;
+                height: 1px;
+                background: #333;
+            }
+            .s37 .dot {
+                width: 4px;
+                height: 4px;
+                background: #cc0000;
+                border-radius: 50%;
+            }
+            .s37 .sub {
+                font-size: 0.55rem;
+                letter-spacing: 0.3em;
+                color: #555;
+                text-transform: uppercase;
+            }
+
+            /* 38 — Kinetic Lines */
+            .s38 {
+                background: #fff;
+                position: relative;
+                overflow: hidden;
+            }
+            .s38 .lines-bg {
+                position: absolute;
+                inset: 0;
+                background: repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 8px,
+                    rgba(204, 0, 0, 0.04) 8px,
+                    rgba(204, 0, 0, 0.04) 9px
+                );
+            }
+            .s38 .inner {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 0;
+                width: 100%;
+            }
+            .s38 .left2 {
+                width: 50%;
+                background: #cc0000;
+                height: 260px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s38 .li {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 6rem;
+                color: rgba(255, 255, 255, 0.2);
+                line-height: 1;
+            }
+            .s38 .right2 {
+                width: 50%;
+                padding: 0 20px;
+                display: flex;
+                flex-direction: column;
+            }
+            .s38 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.08em;
+                color: #111;
+                line-height: 1.2;
+            }
+            .s38 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.22em;
+                color: #cc0000;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-top: 6px;
+            }
+            .s38 .rbar2 {
+                width: 24px;
+                height: 3px;
+                background: #cc0000;
+                margin-bottom: 8px;
+            }
+
+            /* 39 — Oversized Letter */
+            .s39 {
+                background: #cc0000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s39 .giant {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 16rem;
+                color: rgba(0, 0, 0, 0.12);
+                line-height: 1;
+            }
+            .s39 .inner {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+            }
+            .s39 .circle2 {
+                width: 72px;
+                height: 72px;
+                border: 2px solid rgba(255, 255, 255, 0.6);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s39 .ci {
+                font-family: 'Playfair Display', serif;
+                font-size: 2rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+            }
+            .s39 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.6rem;
+                letter-spacing: 0.14em;
+                color: #fff;
+            }
+            .s39 .sub {
+                font-size: 0.56rem;
+                letter-spacing: 0.28em;
+                color: rgba(255, 255, 255, 0.6);
+                text-transform: uppercase;
+            }
+
+            /* 40 — Black Gold Ultimate */
+            .s40 {
+                background: #000;
+                position: relative;
+                overflow: hidden;
+            }
+            .s40 .beam {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 2px;
+                height: 100%;
+                background: linear-gradient(180deg, transparent, rgba(212, 168, 68, 0.3), transparent);
+            }
+            .s40 .inner {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 14px;
+                position: relative;
+            }
+            .s40 .top-diamond {
+                width: 60px;
+                height: 60px;
+                background: linear-gradient(135deg, var(--gold), #8a5e00);
+                transform: rotate(45deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .s40 .di {
+                font-family: 'Playfair Display', serif;
+                font-size: 1.8rem;
+                font-style: italic;
+                color: #fff;
+                font-weight: 700;
+                transform: rotate(-45deg);
+            }
+            .s40 .name {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 1.5rem;
+                letter-spacing: 0.3em;
+                color: var(--gold);
+                text-align: center;
+            }
+            .s40 .row2 {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                width: 200px;
+            }
+            .s40 .rl {
+                flex: 1;
+                height: 1px;
+                background: rgba(212, 168, 68, 0.3);
+            }
+            .s40 .rd {
+                width: 4px;
+                height: 4px;
+                background: var(--gold);
+                transform: rotate(45deg);
+            }
+            .s40 .sub {
+                font-size: 0.54rem;
+                letter-spacing: 0.36em;
+                color: rgba(212, 168, 68, 0.4);
+                text-transform: uppercase;
+            }
+
+            /* flex helpers */
+            .fcol {
+                flex-direction: column;
+            }
+            .fcenter {
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-eyebrow">Explorador de identidad visual</div>
+            <h1><em>Idearte</em> <span>Digital</span></h1>
+            <p class="header-sub">
+                40 variantes de diseño para explorar distintas direcciones visuales. Hacé clic en cualquier propuesta
+                para verla ampliada y descargarla.
+            </p>
+            <div class="header-count"><strong>40</strong> diseños · 5 categorías · descarga PNG inmediata</div>
+        </header>
+
+        <nav class="filters">
+            <button class="f-btn active" onclick="filter('all', this)">Todos (40)</button>
+            <button class="f-btn" onclick="filter('bold', this)">🔥 Bold &amp; Energético</button>
+            <button class="f-btn" onclick="filter('luxury', this)">✦ Lujo &amp; Elegancia</button>
+            <button class="f-btn" onclick="filter('minimal', this)">○ Minimalista</button>
+            <button class="f-btn" onclick="filter('modern', this)">◈ Moderno &amp; Digital</button>
+            <button class="f-btn" onclick="filter('editorial', this)">❧ Editorial &amp; Tipográfico</button>
+        </nav>
+
+        <div class="grid" id="grid">
+            <!-- 1 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s1 fcol fcenter">
+                    <div class="logo-circle"><span class="logo-i">i</span></div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>01 — Clásico Rojo</h3>
+                        <p>Reconocible · Directo · Sólido</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s2 fcenter">
+                    <div class="frame">
+                        <div class="corner tl"></div>
+                        <div class="corner tr"></div>
+                        <div class="corner bl"></div>
+                        <div class="corner br"></div>
+                        <div class="big-i">i</div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="rule"></div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>02 — Dark Gold</h3>
+                        <p>Luxury · Premium · Refinado</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s3 fcol fcenter">
+                    <div class="orb"><span class="orb-i">i</span></div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>03 — Neon Glow</h3>
+                        <p>Futurista · Vibrante · Magnético</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card" data-cat="minimal">
+                <div class="dp s4 fcenter">
+                    <div class="inner">
+                        <div class="rule"></div>
+                        <div class="big-i">i</div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>04 — Swiss Minimal</h3>
+                        <p>Limpio · Tipográfico · Claro</p>
+                    </div>
+                    <span class="tag t-minimal">Minimal</span>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s5 fcol fcenter">
+                    <div class="medallion">
+                        <div class="ring"></div>
+                        <span class="med-i">i</span>
+                    </div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>05 — Fire &amp; Gold</h3>
+                        <p>Dramático · Poderoso · Oscuro</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s6 fcenter">
+                    <div class="row">
+                        <div class="bar"></div>
+                        <div class="col">
+                            <div class="big-i">I</div>
+                            <div class="name">IDEARTE DIGITAL</div>
+                            <div class="sub">Influencers &amp; UGC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>06 — Dark Bar</h3>
+                        <p>Contundente · Industrial · Potente</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s7 fcol fcenter">
+                    <div class="circle"><span class="ci">i</span></div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>07 — Gradient Glam</h3>
+                        <p>Vibrante · Llamativo · Dinámico</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s8 fcenter" style="flex-direction: column; align-items: stretch">
+                    <div class="top"><span class="ti">i</span></div>
+                    <div class="bot">
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>08 — Corporate Split</h3>
+                        <p>Directo · Profesional · Fuerte</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s9 fcenter">
+                    <div class="grid-bg"></div>
+                    <div class="row" style="position: relative">
+                        <div class="diamond"><span class="di">i</span></div>
+                        <div class="txt">
+                            <div class="name">IDEARTE</div>
+                            <div
+                                class="tag2"
+                                style="
+                                    font-family: 'Bebas Neue', sans-serif;
+                                    font-size: 1.2rem;
+                                    letter-spacing: 0.12em;
+                                    color: #fff;
+                                "
+                            >
+                                DIGITAL
+                            </div>
+                            <div class="sub">Influencers &amp; UGC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>09 — Tech Grid</h3>
+                        <p>Geométrico · Futurista · Preciso</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="card" data-cat="editorial">
+                <div class="dp s10 fcenter">
+                    <div class="stamp">
+                        <div class="si">i</div>
+                        <div class="sdiv"></div>
+                        <div class="sname">IDEARTE DIGITAL</div>
+                        <div class="sdiv"></div>
+                        <div class="ssub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>10 — Vintage Stamp</h3>
+                        <p>Artístico · Retro · Memorable</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s11 fcol fcenter">
+                    <div class="scan"></div>
+                    <div class="word" style="position: relative">
+                        <span class="w1">I</span><span class="w2">DEARTE</span>
+                    </div>
+                    <div class="divl" style="position: relative"></div>
+                    <div class="sub" style="position: relative">Digital · Influencers · UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>11 — Cinematic Red</h3>
+                        <p>Dramático · Cinematográfico · Épico</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s12 fcenter">
+                    <div class="ghost">i</div>
+                    <div class="inner" style="position: relative">
+                        <div class="label">Agencia de</div>
+                        <div class="name">IDEARTE<br />DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>12 — Red Poster</h3>
+                        <p>Potente · Overlay · Impactante</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s13 fcenter">
+                    <div class="sh1"></div>
+                    <div class="sh2"></div>
+                    <div class="row" style="position: relative">
+                        <div class="circ"><span class="ci">i</span></div>
+                        <div class="right">
+                            <div
+                                class="sub"
+                                style="
+                                    font-family: 'Montserrat', sans-serif;
+                                    font-size: 0.52rem;
+                                    letter-spacing: 0.2em;
+                                    color: #cc0000;
+                                    text-transform: uppercase;
+                                    font-weight: 700;
+                                "
+                            >
+                                IDEARTE
+                            </div>
+                            <div class="name">DIGITAL</div>
+                            <div class="hr"></div>
+                            <div class="tag2">Influencers &amp; UGC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>13 — Geo Modern</h3>
+                        <p>Limpio · Geométrico · Con estilo</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="card" data-cat="editorial">
+                <div class="dp s14" style="flex-direction: row; align-items: stretch; padding: 0">
+                    <div class="half-r"></div>
+                    <div class="l"><span class="li">i</span></div>
+                    <div class="r">
+                        <div class="rbar"></div>
+                        <div class="name">IDEARTE<br />DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>14 — Duotone Split</h3>
+                        <p>Audaz · Bicolor · Editorial</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s15 fcol fcenter">
+                    <div class="rings"><span></span><span></span><span></span></div>
+                    <div class="logo" style="position: relative"><span class="li">i</span></div>
+                    <div class="name" style="position: relative">IDEARTE DIGITAL</div>
+                    <div class="sub" style="position: relative">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>15 — Pulse Red</h3>
+                        <p>Energía · Brillo · Hipnótico</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="card" data-cat="editorial">
+                <div
+                    class="dp s16"
+                    style="flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 0"
+                >
+                    <div class="top-bar"></div>
+                    <div class="body">
+                        <div class="eyebrow">Agencia líder en</div>
+                        <div class="main"><span class="m1">ide</span><span class="m2">arte</span></div>
+                        <div class="divl"></div>
+                        <div class="sub">Digital · Influencers · UGC</div>
+                        <div class="tagline">"Creamos tendencias"</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>16 — Magazine Cover</h3>
+                        <p>Editorial · Elegante · Refinado</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s17 fcenter">
+                    <div class="slash"></div>
+                    <div class="row" style="position: relative">
+                        <span class="si">i</span>
+                        <div class="col">
+                            <div class="name">IDEARTE<br />DIGITAL</div>
+                            <div class="line"></div>
+                            <div class="sub">Influencers &amp; UGC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>17 — Sportswear</h3>
+                        <p>Dinámico · Rápido · Potente</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s18 fcol fcenter">
+                    <div class="avatar"><span class="ai">i</span></div>
+                    <div class="name">Idearte Digital</div>
+                    <div class="handle">@ide.artedigital</div>
+                    <div class="pill">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>18 — Social App</h3>
+                        <p>Digital · Nativo · Joven</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 19 -->
+            <div class="card" data-cat="minimal">
+                <div class="dp s19 fcenter">
+                    <div class="inner">
+                        <div class="big">ide<br />arte</div>
+                        <div class="dig">DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>19 — Brutalist</h3>
+                        <p>Rudo · Sin filtros · Crudo</p>
+                    </div>
+                    <span class="tag t-minimal">Minimal</span>
+                </div>
+            </div>
+
+            <!-- 20 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s20 fcol fcenter">
+                    <div class="seal">
+                        <div class="or"></div>
+                        <div class="mr"></div>
+                        <div class="ic"><span class="si">i</span></div>
+                    </div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="drow">
+                        <div class="dl"></div>
+                        <div class="dm"></div>
+                        <div class="dl"></div>
+                    </div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>20 — Premium Seal</h3>
+                        <p>Exclusivo · Ceremonial · Oro</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 21 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s21 fcol fcenter">
+                    <div class="outline-i">I</div>
+                    <div class="front">
+                        <div class="line"></div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                        <div class="line"></div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>21 — Neon Outline</h3>
+                        <p>Fantasmal · Impacto · Oscuro</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 22 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s22 fcenter">
+                    <div class="stripe"></div>
+                    <div class="inner">
+                        <div class="eyebrow">Agencia premium</div>
+                        <div class="name"><em>Ide</em>arte Digital</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>22 — Luxury Stripe</h3>
+                        <p>Sofisticado · Serif · Premium</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 23 -->
+            <div class="card" data-cat="minimal">
+                <div class="dp s23" style="flex-direction: column; align-items: stretch; padding: 0">
+                    <div class="blk">
+                        <div class="ci2"><span class="li">i</span></div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                    </div>
+                    <div class="foot2"><div class="sub">Influencers &amp; UGC</div></div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>23 — Monochrome Block</h3>
+                        <p>Contrastado · Fuerte · Limpio</p>
+                    </div>
+                    <span class="tag t-minimal">Minimal</span>
+                </div>
+            </div>
+
+            <!-- 24 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s24 fcol fcenter">
+                    <div class="hex-wrap">
+                        <div class="hex"></div>
+                        <span class="hi">i</span>
+                    </div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="rule"></div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>24 — Dark Luxury Hex</h3>
+                        <p>Poderoso · Oscuro · Refinado</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 25 -->
+            <div class="card" data-cat="editorial">
+                <div class="dp s25 fcenter" style="padding: 0">
+                    <div class="red-block"></div>
+                    <div class="inner" style="position: relative">
+                        <div class="left"><span class="li">i</span></div>
+                        <div class="right">
+                            <div class="bar"></div>
+                            <div class="name">IDEARTE<br />DIGITAL</div>
+                            <div class="sub">Influencers &amp; UGC</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>25 — Editorial Bold</h3>
+                        <p>Serif · Bicolor · Impactante</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 26 -->
+            <div class="card" data-cat="editorial">
+                <div class="dp s26 fcenter">
+                    <div class="inner">
+                        <div class="ide">ide</div>
+                        <div class="arte">ARTE</div>
+                        <div class="digital">— DIGITAL —</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>26 — Typographic Stack</h3>
+                        <p>Capas · Contraste · Textural</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 27 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s27 fcol fcenter">
+                    <div class="marble"></div>
+                    <div class="veins"></div>
+                    <div class="inner" style="position: relative">
+                        <div class="seal2"><span class="si">i</span></div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>27 — Marble Luxury</h3>
+                        <p>Orgánico · Refinado · Alto valor</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 28 -->
+            <div class="card" data-cat="minimal">
+                <div class="dp s28 fcol fcenter">
+                    <div class="inner">
+                        <div class="border-box">
+                            <div class="bi">i</div>
+                            <div class="rule"></div>
+                            <div class="bname">IDEARTE DIGITAL</div>
+                        </div>
+                        <div class="sub" style="margin-top: 10px">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>28 — Black &amp; White Box</h3>
+                        <p>Maximalista · Blanco/Negro · Puro</p>
+                    </div>
+                    <span class="tag t-minimal">Minimal</span>
+                </div>
+            </div>
+
+            <!-- 29 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s29 fcol fcenter">
+                    <div class="logo-sq"><span class="li">i</span></div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                    <div class="pill2">@ide.artedigital</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>29 — Gradient Dark</h3>
+                        <p>App-style · Moderno · Profundo</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 30 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s30 fcol fcenter">
+                    <div class="g1">IDEARTE</div>
+                    <div class="g2">IDEARTE</div>
+                    <div class="front2">
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>30 — Glitch Effect</h3>
+                        <p>Roto · Digital · Disruptivo</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 31 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s31 fcol fcenter">
+                    <div class="inner">
+                        <div class="crown"><span class="ci">i</span></div>
+                        <div class="name">Idearte Digital</div>
+                        <div class="hr"></div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>31 — Warm Cream</h3>
+                        <p>Cálido · Orgánico · Boutique</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 32 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s32 fcol fcenter">
+                    <div class="stripe1"></div>
+                    <div class="inner">
+                        <div class="i-wrap"><span class="bi2">i</span></div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                    <div class="stripe2"></div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>32 — Punk Stripes</h3>
+                        <p>Rudo · Enérgico · Sin filtros</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 33 -->
+            <div class="card" data-cat="minimal">
+                <div class="dp s33 fcol fcenter">
+                    <div class="outer">
+                        <div class="inner2"><span class="ci">i</span></div>
+                    </div>
+                    <div class="name">IDEARTE DIGITAL</div>
+                    <div class="sub">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>33 — Clean Circle</h3>
+                        <p>Redondo · Claro · Confiable</p>
+                    </div>
+                    <span class="tag t-minimal">Minimal</span>
+                </div>
+            </div>
+
+            <!-- 34 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s34 fcol fcenter">
+                    <div class="inner">
+                        <div class="logo-d"><span class="li">i</span></div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="rule"></div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>34 — Foil Gold</h3>
+                        <p>Metalizado · Exclusivo · Brillante</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 35 -->
+            <div class="card" data-cat="editorial">
+                <div class="dp s35 fcenter">
+                    <div class="inner">
+                        <div class="big">idearte</div>
+                        <div class="name2">DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>35 — Bold Italic Serif</h3>
+                        <p>Orgánico · Serif · Distinto</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 36 -->
+            <div class="card" data-cat="modern">
+                <div class="dp s36 fcol fcenter">
+                    <div class="sun"></div>
+                    <div class="lines"></div>
+                    <div class="name" style="position: relative">IDEARTE DIGITAL</div>
+                    <div class="sub" style="position: relative">Influencers &amp; UGC</div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>36 — Retro Wave</h3>
+                        <p>80s · Nostálgico · Neon</p>
+                    </div>
+                    <span class="tag t-modern">Moderno</span>
+                </div>
+            </div>
+
+            <!-- 37 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s37 fcol fcenter">
+                    <div class="inner">
+                        <div class="sq"><span class="si">i</span></div>
+                        <div class="name">Idearte Digital</div>
+                        <div class="divl2">
+                            <div class="dl2"></div>
+                            <div class="dot"></div>
+                            <div class="dl2"></div>
+                        </div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>37 — Black Serif</h3>
+                        <p>Sobrio · Elegante · Oscuro</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+
+            <!-- 38 -->
+            <div class="card" data-cat="editorial">
+                <div class="dp s38" style="flex-direction: row; align-items: stretch; padding: 0">
+                    <div class="lines-bg"></div>
+                    <div class="left2"><span class="li">I</span></div>
+                    <div class="right2">
+                        <div class="rbar2"></div>
+                        <div class="name">IDEARTE<br />DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>38 — Kinetic Lines</h3>
+                        <p>Textura · Split · Energético</p>
+                    </div>
+                    <span class="tag t-editorial">Editorial</span>
+                </div>
+            </div>
+
+            <!-- 39 -->
+            <div class="card" data-cat="bold">
+                <div class="dp s39 fcol fcenter">
+                    <div class="giant">I</div>
+                    <div class="inner" style="position: relative">
+                        <div class="circle2"><span class="ci">i</span></div>
+                        <div class="name">IDEARTE DIGITAL</div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>39 — Oversized Letter</h3>
+                        <p>Maximalista · Rojo · Presencia total</p>
+                    </div>
+                    <span class="tag t-bold">Bold</span>
+                </div>
+            </div>
+
+            <!-- 40 -->
+            <div class="card" data-cat="luxury">
+                <div class="dp s40 fcol fcenter">
+                    <div class="beam"></div>
+                    <div class="inner" style="position: relative">
+                        <div class="top-diamond"><span class="di">i</span></div>
+                        <div class="name">IDEARTE<br />DIGITAL</div>
+                        <div class="row2">
+                            <div class="rl"></div>
+                            <div class="rd"></div>
+                            <div class="rl"></div>
+                        </div>
+                        <div class="sub">Influencers &amp; UGC</div>
+                    </div>
+                </div>
+                <div class="card-foot">
+                    <div class="card-info">
+                        <h3>40 — Black Gold Ultimate</h3>
+                        <p>Máximo lujo · Diamante · Icónico</p>
+                    </div>
+                    <span class="tag t-luxury">Lujo</span>
+                </div>
+            </div>
+        </div>
+        <!-- /grid -->
+
+        <!-- MODAL -->
+        <div class="modal" id="modal" onclick="closeModal(event)">
+            <div class="mbox">
+                <div class="mpreview" id="mpreview"></div>
+                <div class="mfoot">
+                    <div class="minfo">
+                        <h3 id="mtitle"></h3>
+                        <p id="mdesc"></p>
+                    </div>
+                    <div class="mactions">
+                        <button class="btn-x" onclick="document.getElementById('modal').classList.remove('open')">
+                            ✕ Cerrar
+                        </button>
+                        <button class="btn-dl" onclick="downloadPNG()">⬇ Descargar PNG</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script>
+            const data = {
+                1: { t: '01 — Clásico Rojo', d: 'Bold · Energético · Reconocible', c: 's1', k: 'bold' },
+                2: { t: '02 — Dark Gold', d: 'Luxury · Premium · Refinado', c: 's2', k: 'luxury' },
+                3: { t: '03 — Neon Glow', d: 'Futurista · Vibrante · Magnético', c: 's3', k: 'modern' },
+                4: { t: '04 — Swiss Minimal', d: 'Limpio · Tipográfico · Claro', c: 's4', k: 'minimal' },
+                5: { t: '05 — Fire & Gold', d: 'Dramático · Poderoso · Oscuro', c: 's5', k: 'luxury' },
+                6: { t: '06 — Dark Bar', d: 'Contundente · Industrial · Potente', c: 's6', k: 'bold' },
+                7: { t: '07 — Gradient Glam', d: 'Vibrante · Llamativo · Dinámico', c: 's7', k: 'bold' },
+                8: { t: '08 — Corporate Split', d: 'Directo · Profesional · Fuerte', c: 's8', k: 'bold' },
+                9: { t: '09 — Tech Grid', d: 'Geométrico · Futurista · Preciso', c: 's9', k: 'modern' },
+                10: { t: '10 — Vintage Stamp', d: 'Artístico · Retro · Memorable', c: 's10', k: 'editorial' },
+                11: { t: '11 — Cinematic Red', d: 'Dramático · Cinematográfico · Épico', c: 's11', k: 'bold' },
+                12: { t: '12 — Red Poster', d: 'Potente · Overlay · Impactante', c: 's12', k: 'bold' },
+                13: { t: '13 — Geo Modern', d: 'Limpio · Geométrico · Con estilo', c: 's13', k: 'modern' },
+                14: { t: '14 — Duotone Split', d: 'Audaz · Bicolor · Editorial', c: 's14', k: 'editorial' },
+                15: { t: '15 — Pulse Red', d: 'Energía · Brillo · Hipnótico', c: 's15', k: 'bold' },
+                16: { t: '16 — Magazine Cover', d: 'Editorial · Elegante · Refinado', c: 's16', k: 'editorial' },
+                17: { t: '17 — Sportswear', d: 'Dinámico · Rápido · Potente', c: 's17', k: 'bold' },
+                18: { t: '18 — Social App', d: 'Digital · Nativo · Joven', c: 's18', k: 'modern' },
+                19: { t: '19 — Brutalist', d: 'Rudo · Sin filtros · Crudo', c: 's19', k: 'minimal' },
+                20: { t: '20 — Premium Seal', d: 'Exclusivo · Ceremonial · Oro', c: 's20', k: 'luxury' },
+                21: { t: '21 — Neon Outline', d: 'Fantasmal · Impacto · Oscuro', c: 's21', k: 'bold' },
+                22: { t: '22 — Luxury Stripe', d: 'Sofisticado · Serif · Premium', c: 's22', k: 'luxury' },
+                23: { t: '23 — Monochrome Block', d: 'Contrastado · Fuerte · Limpio', c: 's23', k: 'minimal' },
+                24: { t: '24 — Dark Luxury Hex', d: 'Poderoso · Oscuro · Refinado', c: 's24', k: 'luxury' },
+                25: { t: '25 — Editorial Bold', d: 'Serif · Bicolor · Impactante', c: 's25', k: 'editorial' },
+                26: { t: '26 — Typographic Stack', d: 'Capas · Contraste · Textural', c: 's26', k: 'editorial' },
+                27: { t: '27 — Marble Luxury', d: 'Orgánico · Refinado · Alto valor', c: 's27', k: 'luxury' },
+                28: { t: '28 — Black & White Box', d: 'Maximalista · Blanco/Negro · Puro', c: 's28', k: 'minimal' },
+                29: { t: '29 — Gradient Dark', d: 'App-style · Moderno · Profundo', c: 's29', k: 'modern' },
+                30: { t: '30 — Glitch Effect', d: 'Roto · Digital · Disruptivo', c: 's30', k: 'modern' },
+                31: { t: '31 — Warm Cream', d: 'Cálido · Orgánico · Boutique', c: 's31', k: 'luxury' },
+                32: { t: '32 — Punk Stripes', d: 'Rudo · Enérgico · Sin filtros', c: 's32', k: 'bold' },
+                33: { t: '33 — Clean Circle', d: 'Redondo · Claro · Confiable', c: 's33', k: 'minimal' },
+                34: { t: '34 — Foil Gold', d: 'Metalizado · Exclusivo · Brillante', c: 's34', k: 'luxury' },
+                35: { t: '35 — Bold Italic Serif', d: 'Orgánico · Serif · Distinto', c: 's35', k: 'editorial' },
+                36: { t: '36 — Retro Wave', d: '80s · Nostálgico · Neon', c: 's36', k: 'modern' },
+                37: { t: '37 — Black Serif', d: 'Sobrio · Elegante · Oscuro', c: 's37', k: 'luxury' },
+                38: { t: '38 — Kinetic Lines', d: 'Textura · Split · Energético', c: 's38', k: 'editorial' },
+                39: { t: '39 — Oversized Letter', d: 'Maximalista · Rojo · Presencia total', c: 's39', k: 'bold' },
+                40: { t: '40 — Black Gold Ultimate', d: 'Máximo lujo · Diamante · Icónico', c: 's40', k: 'luxury' },
+            }
+
+            let cur = null
+
+            // attach click to each card
+            document.querySelectorAll('.card').forEach((card, i) => {
+                card.addEventListener('click', () => openModal(i + 1))
+            })
+
+            function openModal(id) {
+                cur = id
+                const d = data[id]
+                document.getElementById('mtitle').textContent = d.t
+                document.getElementById('mdesc').textContent = d.d
+
+                const cards = document.querySelectorAll('.card')
+                const srcDP = cards[id - 1].querySelector('.dp')
+
+                const mp = document.getElementById('mpreview')
+                mp.className = 'mpreview ' + d.c
+                mp.innerHTML = srcDP.innerHTML
+
+                document.getElementById('modal').classList.add('open')
+            }
+
+            function closeModal(e) {
+                if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open')
+            }
+
+            function downloadPNG() {
+                const mp = document.getElementById('mpreview')
+                html2canvas(mp, {
+                    scale: 3,
+                    useCORS: true,
+                    backgroundColor: null,
+                    width: 700,
+                    height: 420,
+                    onclone: (doc) => {
+                        // ensure fonts are loaded in clone
+                    },
+                }).then((canvas) => {
+                    const a = document.createElement('a')
+                    a.download = 'idearte-digital-' + data[cur].c + '.png'
+                    a.href = canvas.toDataURL('image/png')
+                    a.click()
+                })
+            }
+
+            function filter(cat, btn) {
+                document.querySelectorAll('.f-btn').forEach((b) => b.classList.remove('active'))
+                btn.classList.add('active')
+                document.querySelectorAll('.card').forEach((card) => {
+                    card.style.display = cat === 'all' || card.dataset.cat === cat ? '' : 'none'
+                })
+            }
+        </script>
+    </body>
+</html>
